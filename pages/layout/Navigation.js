@@ -4,9 +4,10 @@ import { Transition } from '@headlessui/react'
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(true)
   return (
-    <nav className='bg-pink-100'>
+    <nav className='bg-pink-100 '>
       <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
-        <div className='relative flex items-center justify-between h-16'>
+        <div className='relative flex items-center justify-center h-16'>
+          <p className='mr-4 font-extrabold text-pink-500'>It's your</p>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
             {/* <!-- Mobile menu button--> */}
             <button
@@ -21,6 +22,7 @@ export default function Navigation() {
 
             Menu open: "hidden", Menu closed: "block"
           --> */}
+
               <svg
                 className='block h-6 w-6'
                 xmlns='http://www.w3.org/2000/svg'
@@ -80,37 +82,7 @@ export default function Navigation() {
               </g>
             </svg>
           </div>
-          <div className='flex-1 flex items-center justify-center sm:items-center sm:justify-end'>
-            <div className='hidden sm:block sm:ml-6 '>
-              <div className='flex space-x-4'>
-                {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                <a
-                  href='#'
-                  className='text-pink-500 hover:bg-pink-300 hover:text-white px-3 py-2 rounded-md text-sm font-extrabold tracking-widest'
-                >
-                  Songs
-                </a>
-                <a
-                  href='#'
-                  className='text-pink-500 hover:bg-pink-300 hover:text-white px-3 py-2 rounded-md text-sm font-extrabold tracking-widest'
-                >
-                  Store
-                </a>
-                <a
-                  href='#'
-                  className='text-pink-500 hover:bg-pink-300 hover:text-white px-3 py-2 rounded-md text-sm font-extrabold tracking-widest'
-                >
-                  Contact
-                </a>
-                <a
-                  href='#'
-                  className='text-pink-500 hover:bg-pink-300 hover:text-white px-3 py-2 rounded-md text-sm font-extrabold tracking-widest'
-                >
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
+          <p className='ml-4 font-extrabold text-pink-500'>Day!!!</p>
         </div>
       </div>
 
@@ -119,35 +91,6 @@ export default function Navigation() {
 
     Menu open: "block", Menu closed: "hidden"
   --> */}
-      <div className={`${isOpen && 'hidden sm:hidden'}`}>
-        <div className='px-2 pt-2 pb-3 space-y-1'>
-          {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-          <a
-            href='#'
-            className='text-pink-500 hover:bg-pink-300 hover:text-white block px-3 py-2 rounded-md text-base font-extrabold tracking-widest'
-          >
-            Songs
-          </a>
-          <a
-            href='#'
-            className='text-pink-500 hover:bg-pink-300 hover:text-white block px-3 py-2 rounded-md text-base font-extrabold tracking-widest'
-          >
-            Store
-          </a>
-          <a
-            href='#'
-            className='text-pink-500 hover:bg-pink-300 hover:text-white block px-3 py-2 rounded-md text-base font-extrabold tracking-widest'
-          >
-            Contact
-          </a>
-          <a
-            href='#'
-            className='text-pink-500 hover:bg-pink-300 hover:text-white block px-3 py-2 rounded-md text-base font-extrabold tracking-widest'
-          >
-            Buy Now
-          </a>
-        </div>
-      </div>
     </nav>
   )
 }

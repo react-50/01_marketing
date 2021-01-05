@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import MainHeader from './mainHeader/index'
+import MainForm from './mainForm/index'
 export default function Home() {
   return (
     <div>
@@ -8,6 +9,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.svg' />
       </Head>
       <MainHeader />
+      <MainForm />
     </div>
   )
 }
