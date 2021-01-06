@@ -1,6 +1,8 @@
 import postcards from '../../assets/postcards/postcards'
-export default function MainForm() {
-  console.log('postcards!', postcards)
+
+import { marketing } from '../../utils/firebase/firebase'
+export default function MainForm(props) {
+  console.log('item', props)
   return (
     <div className='py--16 bg-white  lg:py--24'>
       <div className='relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl'>
@@ -168,4 +170,13 @@ export default function MainForm() {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const ref = firestore.doc('01marketing')
+  const item = (await ref.get()).data()
+
+  return {
+    props: { item },
+  }
 }

@@ -1,4 +1,5 @@
 import firebase from 'firebase/app'
+import 'firebase/auth'
 import 'firebase/storage'
 import 'firebase/firestore'
 
@@ -19,9 +20,11 @@ try {
     console.error('Firebase initialization error', err.stack)
   }
 }
+firebase.auth
+firebase.firestore()
 
-export const storage = firebase.storage()
-export const storageRef = storage.ref()
 export const db = firebase.firestore()
+export const marketing = db.collection('01marketing')
+
 export const fire = firebase
 export default firebase
