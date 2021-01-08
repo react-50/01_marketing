@@ -24,8 +24,6 @@ export default function MainHeader() {
         .then(() => {
           dispatch({ type: "REGISTERING_USER" });
         });
-
-      console.log("Registering New User");
     } catch (e) {
       let errorCode = e.code;
       let errMessage = e.message;
